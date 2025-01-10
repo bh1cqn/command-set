@@ -20,4 +20,4 @@ mysql:8 --lower-case-table-names=1
 * -e MYSQL_ROOT_PASSWORD=mysql_password：设置root用户的密码为mysql_password
 * -e TZ=Asia/Shanghai：设置时区为上海时区
 * mysql:8：指定要运行的镜像名称，这里使用mysql:8镜像
-* --lower-case-table-names=1：设置mysql数据库表名是否区分大小写，设置为1表示不区分大小写，设置为0表示区分大小写。__
+* --lower-case-table-names=1：设置mysql数据库表名是否区分大小写，设置为1表示不区分大小写，设置为0表示区分大小写。
