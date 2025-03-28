@@ -54,7 +54,7 @@ services:
     depends_on:
       - tikv
     environment:
-      - MYSQL_ROOT_PASSWORD=your_password
+      - TIDB_ROOT_PASSWORD=your_password
     volumes:
       - tidb-data:/var/lib/tidb
 
@@ -68,12 +68,14 @@ networks:
 ```
 
 ### 部署流程
-
 ``` shell
 podman-compose down
 podman-compose up -d
 ```
-目前mysql密码可能没生效，需要手动改一下
+
+目前mysql密码可能没生效，需要手动改一下  
+值得注意的是，宿主机需要安装mysql-client客户端  
+tidb默认是没有密码的
 ``` shell
 podman exec -it my-tidb /bin/bash
 mysql -uroot -p
@@ -81,5 +83,3 @@ show databases;
 use mysql;
 ALTER USER 'root'@'%' IDENTIFIED BY 'new_password';
 ```
-
-
