@@ -69,7 +69,7 @@ networks:
 
 ### 部署流程
 ``` shell
-podman-compose down
+podman-compose down -v
 podman-compose up -d
 ```
 
