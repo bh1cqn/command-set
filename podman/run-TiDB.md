@@ -76,10 +76,22 @@ podman-compose up -d
 目前mysql密码可能没生效，需要手动改一下  
 值得注意的是，宿主机需要安装mysql-client客户端  
 tidb默认是没有密码的
+
 ``` shell
 podman exec -it my-tidb /bin/bash
+```
+
+``` shell
+# 可能需要安装mysql客户端，二选一
+yum install mysql  # 或 dnf install mysql
+yum install mariadb  # 或 apk add mariadb-client
+```
+
+```
 mysql -uroot -p
 show databases;
 use mysql;
 ALTER USER 'root'@'%' IDENTIFIED BY 'new_password';
 ```
+
+
