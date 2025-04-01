@@ -28,3 +28,15 @@ REVOKE ALL PRIVILEGES ON *.* FROM 'username'@'%';
 GRANT ALL PRIVILEGES ON `schema`.* TO 'username'@'%';
 ```
 
+```
+mysqldump --add-drop-table --skip-create-options --result-file="D:\\data\\ibe-setup-package\\setup4DongFangDianQi\\sql\\new.sql" "prj-nuclear-inspection" --ignore-table=prj-nuclear-inspection.dfdq_data_resource
+```
+
+示例：
+```
+SHOW TABLES LIKE 'dfdq%'
+```
+
+```
+mysqldump --add-drop-table --skip-create-options --result-file="D:\\data\\ibe-setup-package\\setup4DongFangDianQi\\sql\\new.sql" "prj-nuclear-inspection" --ignore-table=prj-nuclear-inspection.dfdq_data_resource --ignore-table=prj-nuclear-inspection.dfdq_lifetime_data_1 --ignore-table=prj-nuclear-inspection
+```
