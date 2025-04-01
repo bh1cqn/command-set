@@ -88,7 +88,7 @@ yum install mariadb  # 或 apk add mariadb-client
 ```
 
 ```
-mysql -uroot -p
+mysql -uroot -p -h 127.0.0.1 -P 4000
 show databases;
 use mysql;
 ALTER USER 'root'@'%' IDENTIFIED BY 'new_password';
